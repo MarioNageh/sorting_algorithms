@@ -35,7 +35,7 @@ listint_t *create_listint(const int *a, size_t n)
 	listint_t *list, *node, *head;
 	int i;
 	int *tmp;
-	for (i = 0; i < n; i++)
+	for (i = 0; i < (int)n; i++)
 	{
 		node = (listint_t *)malloc(sizeof(listint_t));
 		if (!node)
@@ -70,10 +70,10 @@ int main(void)
 	list = create_listint(array, n);
 	if (!list)
 		return (1);
-	// print_list(list);
-	// printf("\n");
+	print_list(list);
+	printf("\n");
 	insertion_sort_list(&list);
-	// printf("\n");
-	// print_list(list);
+	printf("\n");
+	print_list(list);
 	return (0);
 }

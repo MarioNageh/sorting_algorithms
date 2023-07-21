@@ -3,24 +3,19 @@
 
 /**
 *insertion_sort_list - sorts a doubly linked list
-	of integers in ascending order using the Insertion sort algorithm
+*of integers in ascending order using the Insertion sort algorithm
 * @list: pointer to the head of the list
 * Return: void
 */
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *head, *tmp_head, *current, *prev;
+	listint_t *current, *prev;
 
 	if (!list && !((*list)->next))
-		return (NULL);
+		return;
 
 	current = (*list)->next;
-	head = *list;
-
-	tmp_head = (listint_t *)malloc(sizeof(listint_t));
-	tmp_head->prev = NULL;
-	tmp_head->next = NULL;
 
 	while (current)
 	{
